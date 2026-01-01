@@ -35,13 +35,13 @@ const sendEmail = async (options) => {
     await transporter.sendMail(mail);
   } catch (error) {
     console.error(
-      "Email service failed siliently. Make sure that you have provided your MAILTRAP credentials in the .env file",
+      "Email service failed silently. Make sure that you have provided your MAILTRAP credentials in the .env file",
     );
     console.error("Error: ", error);
   }
 };
 
-const emailVerificationMailgenContent = (username, verficationUrl) => {
+const emailVerificationMailgenContent = (username, verificationUrl) => {
   return {
     body: {
       name: username,
@@ -52,7 +52,7 @@ const emailVerificationMailgenContent = (username, verficationUrl) => {
         button: {
           color: "#22BC66",
           text: "Verify your email",
-          link: verficationUrl,
+          link: verificationUrl,
         },
       },
       outro:

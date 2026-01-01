@@ -20,7 +20,7 @@ const getTasks = asyncHandler(async (req, res) => {
   }).populate("assignedTo", "avatar username fullName");
 
   return res
-    .staus(201)
+    .status(201)
     .json(new ApiResponse(201, tasks, "Task fetched successfully"));
 });
 const createTask = asyncHandler(async (req, res) => {
